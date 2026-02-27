@@ -203,12 +203,13 @@ section {
 
 /* ============ COUNTDOWN ============ */
 .countdown {
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #1a1625 0%, #2d1f3d 100%);
+    /* Cambio aquí: Color oscuro -> Color claro -> Color oscuro */
+    background: linear-gradient(180deg, #1a1625 0%, #2d1f3d 50%, #1a1625 100%);
     padding: 50px 20px;
     position: relative;
 }
@@ -217,13 +218,11 @@ section {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="%231a1625" d="M0,60 C300,150 600,0 900,90 C1050,135 1200,60 1200,60 L1200,120 L0,120 Z"/></svg>') no-repeat bottom;
-    background-size: cover;
-    transform: translateY(-99%);
-    pointer-events: none;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 159, 142, 0.5), transparent);
 }
 
 .countdown-title {
